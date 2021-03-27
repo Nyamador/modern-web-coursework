@@ -1,10 +1,53 @@
-html{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@font-face {
+    font-family: 'Eventify Black';
+    src: url('./assets/fonts/SFUIDisplay-Black.woff2') format('woff2'),
+        url('./assets/fonts/SFUIDisplay-Black.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Eventify Light';
+    src: url('./assets/fonts/SFUIDisplay-Light.woff2') format('woff2'),
+        url('./assets/fonts/SFUIDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Eventify Medium';
+    src: url('./assets/fonts/SFUIDisplay-Medium.woff2') format('woff2'),
+        url('./assets/fonts/SFUIDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Eventify Regular';
+    src: url('./assets/fonts/SFUIDisplay-Regular.woff2') format('woff2'),
+        url('./assets/fonts/SFUIDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    font-family: 'Eventify Regular';
+}
+
 
 *{
     box-sizing:border-box;
 }
+
+
+:root{
+    --eventify-purple: #1a0f2b;
+}
+
 
 body{
     margin: 0;
@@ -23,7 +66,7 @@ header{
 
 .upcoming-events{
     background-color: white;
-    height: 250px
+    height: 300px
 }
 
 .upcoming-card{
@@ -31,4 +74,21 @@ header{
     width: 300px;
     box-shadow: 0px 0px 10px #eaeaea;
     border-radius: 8px;
+}
+
+.date{
+    border-radius: 4px;
+}
+
+/*  */
+.banner-container{
+    height: 400px;
+}
+
+
+.event-image{
+    background-image: url('./assets/dominic-hampton-_8aRumOixtI-unsplash.jpg');
+    background-color: #ededed;
+    object-fit: contain;
+    background-position: 50%;
 }
