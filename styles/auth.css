@@ -1,0 +1,28 @@
+html{
+    background-color: #f4f4f5;
+}
+
+body, main{
+    height: 100vh;
+}
+
+h1{
+    font-size: 25px;
+}
+
+main{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-container{
+    background-color: white;
+    box-shadow: 10px gainsboro;
+    padding: 30px;
+    width: 100%;
+    border-radius: 12px;
+    width: 80%;
+}

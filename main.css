@@ -130,13 +130,13 @@ header{
 .event-card{
     
     height: 300px;
-    box-shadow: 0 16px 64px -16px rgb(46 55 77 / 10%);
+    box-shadow: 1px 1px 64px -16px rgb(46 55 77 / 10%);
     margin-bottom: 10px;
     flex-basis: 250px;
 }
 
 .event-card:hover{
-    box-shadow: 0 16px 64px -16px rgb(46 55 77 / 24%);
+    box-shadow: 0px 0px 64px -16px rgb(51 53 58 / 14%);
     cursor: pointer;
 }
 
@@ -147,4 +147,57 @@ header{
 
 .event-card-details{
     padding: 10px;
+}
+
+
+footer{
+    background-color: var(--eventify-purple);
+    min-height: 200px;
+    color: white;
+}
+
+
+/* Form elements */
+.form-group{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-group > label{
+    margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="password"]{
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border: 1px solid var(--eventify-purple);
+}
+
+/* Button */
+.btn{
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: var(--eventify-purple);
+    color: white;
+    outline: none;
+    border: none;
+    transition: all 0.1s;
+}
+
+.btn:hover{
+    background-color: #402d5d;
+}
+
+.btn:focus{
+    transform: scale(0.99);
 }
