@@ -4,197 +4,190 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="utility.css">
-    <title>Eventify Home</title>
+    <link rel="stylesheet" href="./styles/main.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link href="//fonts.googleapis.com/css?family=Lora:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap&amp;subset=cyrillic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Sora:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap&amp;subset=latin" rel="stylesheet" type="text/css">    
+    <title>Eventify | Home</title>
 </head>
 <body>
 
-    <header class="container bg-white p-4">
-            <h1>Eventify</h1>
+    <header class="header pb-10">
+        <nav class="navbar-container flex flex-row p-4">
+                <div>
+                    Eventify
+                </div>
+                
+                <div class="ml-auto">
+                    <ul class="flex flex-row">
+                        <li class="mr-2">
+                            <a href="/" class="hover:text-gray-700">Login</a>
+                        </li>
+
+                        <li class="mr-2">
+                            <a href="/" class="hover:text-gray-700">Signup</a>
+                        </li>                        
+                    </ul>
+                </div>
+
+        </nav>
+
+        <div class="pt-20 pb-10">
+            <div class="w-8/12 m-auto text-center mb-6">
+                <h1 class="text-7xl font-semibold">All Your Favourite</h1>
+            </div>
+            
+            <div class="w-8/12 m-auto text-center">
+                <p class="text-7xl">Events In One Place</p>
+            </div>
+        </div>
+
+
+        <section class="carousel-container">
+                <div class="flex flex-row">
+                    <div class="pl-2 pr-2 w-1/4 h-full event-card-container flex flex-col">
+                        <a href="/">
+                            <div class="event-card-bg rounded-md text-white" style="background-image: url('./assets/images/african.jpg');">
+                                        <div class="h-1/2 mt-auto w-full p-4 flex flex-col">
+                                            <div class="border-b border-white pb-4 mb-4">
+                                                <p class="text-3xl event-name">Imprisoned nearly 40 years for slave trade</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm">By Ronald Richards</p>
+                                                <p class="text-sm">20th January, 2021</p>
+                                            </div>
+                                        </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="pl-2 pr-2 w-1/4 h-full event-card-container flex flex-col">
+                        <a href="/">
+                            <div class="event-card-bg rounded-md text-white" style="background-image: url('./assets/images/image-2.jpg');">
+                                        <div class="h-1/2 mt-auto w-full p-4 flex flex-col">
+                                            <div class="border-b border-white pb-4 mb-4">
+                                                <p class="text-3xl event-name">Fox News personalities attack Bill Gates for pandemic comments</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm">By Ronald Richards</p>
+                                                <p class="text-sm">20th January, 2021</p>
+                                            </div>
+                                        </div>
+                            </div>
+                        </a>
+                    </div>    
+                    
+                    <div class="pl-2 pr-2 w-1/4 h-full event-card-container flex flex-col">
+                        <a href="/">
+                            <div class="event-card-bg rounded-md text-white" style="background-image: url('./assets/images/image-3.jpg');">
+                                        <div class="h-1/2 mt-auto w-full p-4 flex flex-col">
+                                            <div class="border-b border-white pb-4 mb-4">
+                                                <p class="text-3xl event-name">'Fantastic' Barca wins on landmark night for Lionel Messi in la liga football</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm">By Ronald Richards</p>
+                                                <p class="text-sm">20th January, 2021</p>
+                                            </div>
+                                        </div>
+                            </div>
+                        </a>
+                    </div>     
+                    
+                    <div class="pl-2 pr-2 w-1/4 h-full event-card-container flex flex-col">
+                        <a href="/">
+                            <div class="event-card-bg rounded-md text-white" style="background-image: url('./assets/images/image-4.jpg');">
+                                        <div class="h-1/2 mt-auto w-full p-4 flex flex-col">
+                                            <div class="border-b border-white pb-4 mb-4">
+                                                <p class="text-3xl event-name">Actor Ian McKellen receives Covid-19 vaccine, says he feels 'euphoric'</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm">By Ronald Richards</p>
+                                                <p class="text-sm">20th January, 2021</p>
+                                            </div>
+                                        </div>
+                            </div>
+                        </a>
+                    </div>                         
+                    
+                </div>
+        </section>
+
+
     </header>
 
-    <aside class="upcoming-events bg-purple-gray">
-        <div class="container">
-
-            <div class="flex flex-row items-center">
-                <h1 class="text-xl pt-max pb-max">Upcoming Events</h1>
-                <svg xmlns="http://www.w3.org/2000/svg" height="34px" data-name="Layer 1" viewBox="0 0 24 24"><path fill="var(--eventify-purple)" d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"/></svg>
-            </div>
-
-            <div class="upcoming-events-slider">
-                <article class="bg-white upcoming-card p-20">
-
-                    <div class="upcoming-card-header flex flex-row">
-                        <div class="p-8 text-xs date bg-purple col-1-12 mr-10">
-                            <p class="day text-bold flex content-center">20</p>
-                            <p class="month">NOV</p>
-                        </div>
-
-                        <div class="ml-auto col-11-12">
-                            <p class="upcoming-card-name">All American Reject EU Tour</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-row">
-                        <span class="mr-4">
-                            <svg fill="#1a0f2b" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-tertiary" d="M12,22c-4.48633,0-8-2.19629-8-5c0-1.73535,1.35742-3.30957,3.63184-4.21c0.51306-0.20431,1.09461,0.04598,1.29892,0.55904s-0.04598,1.09461-0.55904,1.29892c-0.00119,0.00047-0.00237,0.00094-0.00356,0.00141C6.90723,15.22754,6,16.12891,6,17c0,1.41895,2.46387,3,6,3s6-1.58105,6-3c0-0.87109-0.90723-1.77246-2.36816-2.35059c-0.51346-0.20333-0.76487-0.7844-0.56155-1.29787c0.20333-0.51346,0.7844-0.76487,1.29787-0.56154l0,0C18.64258,13.69043,20,15.26465,20,17C20,19.80371,16.48633,22,12,22z"></path><circle cx="12" cy="6" r="4" class="uim-tertiary"></circle><path class="uim-primary" d="M12,10c-0.34741,0-0.67859-0.05817-1-0.14142V17c0,0.00037,0,0.00073,0,0.00116C11.00031,17.5531,11.44806,18.00031,12,18c0.00037,0,0.00073,0,0.00116,0C12.5531,17.99969,13.00031,17.55194,13,17V9.85858C12.67859,9.94183,12.34741,10,12,10z"></path></svg>
-                        </span>
-                        <p>Salt Lake City, Utah</p>
-                    </div>
-                </article>
-
-                <article class="bg-white upcoming-card p-20">
-
-                    <div class="upcoming-card-header flex flex-row">
-                        <div class="p-8 text-xs date bg-purple col-1-12 mr-10">
-                            <p class="day text-bold flex content-center">20</p>
-                            <p class="month">NOV</p>
-                        </div>
-
-                        <div class="ml-auto col-11-12">
-                            <p class="upcoming-card-name">All American Reject EU Tour</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-row">
-                        <span class="mr-4">
-                            <svg fill="#1a0f2b" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-tertiary" d="M12,22c-4.48633,0-8-2.19629-8-5c0-1.73535,1.35742-3.30957,3.63184-4.21c0.51306-0.20431,1.09461,0.04598,1.29892,0.55904s-0.04598,1.09461-0.55904,1.29892c-0.00119,0.00047-0.00237,0.00094-0.00356,0.00141C6.90723,15.22754,6,16.12891,6,17c0,1.41895,2.46387,3,6,3s6-1.58105,6-3c0-0.87109-0.90723-1.77246-2.36816-2.35059c-0.51346-0.20333-0.76487-0.7844-0.56155-1.29787c0.20333-0.51346,0.7844-0.76487,1.29787-0.56154l0,0C18.64258,13.69043,20,15.26465,20,17C20,19.80371,16.48633,22,12,22z"></path><circle cx="12" cy="6" r="4" class="uim-tertiary"></circle><path class="uim-primary" d="M12,10c-0.34741,0-0.67859-0.05817-1-0.14142V17c0,0.00037,0,0.00073,0,0.00116C11.00031,17.5531,11.44806,18.00031,12,18c0.00037,0,0.00073,0,0.00116,0C12.5531,17.99969,13.00031,17.55194,13,17V9.85858C12.67859,9.94183,12.34741,10,12,10z"></path></svg>
-                        </span>
-                        <p>Salt Lake City, Utah</p>
-                    </div>
-                </article>                
-
-                <article class="bg-white upcoming-card p-20">
-
-                    <div class="upcoming-card-header flex flex-row">
-                        <div class="p-8 text-xs date bg-purple col-1-12 mr-10">
-                            <p class="day text-bold flex content-center">20</p>
-                            <p class="month">NOV</p>
-                        </div>
-
-                        <div class="ml-auto col-11-12">
-                            <p class="upcoming-card-name">All American Reject EU Tour</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-row">
-                        <span class="mr-4">
-                            <svg fill="#1a0f2b" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-tertiary" d="M12,22c-4.48633,0-8-2.19629-8-5c0-1.73535,1.35742-3.30957,3.63184-4.21c0.51306-0.20431,1.09461,0.04598,1.29892,0.55904s-0.04598,1.09461-0.55904,1.29892c-0.00119,0.00047-0.00237,0.00094-0.00356,0.00141C6.90723,15.22754,6,16.12891,6,17c0,1.41895,2.46387,3,6,3s6-1.58105,6-3c0-0.87109-0.90723-1.77246-2.36816-2.35059c-0.51346-0.20333-0.76487-0.7844-0.56155-1.29787c0.20333-0.51346,0.7844-0.76487,1.29787-0.56154l0,0C18.64258,13.69043,20,15.26465,20,17C20,19.80371,16.48633,22,12,22z"></path><circle cx="12" cy="6" r="4" class="uim-tertiary"></circle><path class="uim-primary" d="M12,10c-0.34741,0-0.67859-0.05817-1-0.14142V17c0,0.00037,0,0.00073,0,0.00116C11.00031,17.5531,11.44806,18.00031,12,18c0.00037,0,0.00073,0,0.00116,0C12.5531,17.99969,13.00031,17.55194,13,17V9.85858C12.67859,9.94183,12.34741,10,12,10z"></path></svg>
-                        </span>
-                        <p>Salt Lake City, Utah</p>
-                    </div>
-                </article>
-                
-                <article class="bg-white upcoming-card p-20">
-
-                    <div class="upcoming-card-header flex flex-row">
-                        <div class="p-8 text-xs date bg-purple col-1-12 mr-10">
-                            <p class="day text-bold flex content-center">20</p>
-                            <p class="month">NOV</p>
-                        </div>
-
-                        <div class="ml-auto col-11-12">
-                            <p class="upcoming-card-name">All American Reject EU Tour</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-row">
-                        <span class="mr-4">
-                            <svg fill="#1a0f2b" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-tertiary" d="M12,22c-4.48633,0-8-2.19629-8-5c0-1.73535,1.35742-3.30957,3.63184-4.21c0.51306-0.20431,1.09461,0.04598,1.29892,0.55904s-0.04598,1.09461-0.55904,1.29892c-0.00119,0.00047-0.00237,0.00094-0.00356,0.00141C6.90723,15.22754,6,16.12891,6,17c0,1.41895,2.46387,3,6,3s6-1.58105,6-3c0-0.87109-0.90723-1.77246-2.36816-2.35059c-0.51346-0.20333-0.76487-0.7844-0.56155-1.29787c0.20333-0.51346,0.7844-0.76487,1.29787-0.56154l0,0C18.64258,13.69043,20,15.26465,20,17C20,19.80371,16.48633,22,12,22z"></path><circle cx="12" cy="6" r="4" class="uim-tertiary"></circle><path class="uim-primary" d="M12,10c-0.34741,0-0.67859-0.05817-1-0.14142V17c0,0.00037,0,0.00073,0,0.00116C11.00031,17.5531,11.44806,18.00031,12,18c0.00037,0,0.00073,0,0.00116,0C12.5531,17.99969,13.00031,17.55194,13,17V9.85858C12.67859,9.94183,12.34741,10,12,10z"></path></svg>
-                        </span>
-                        <p>Salt Lake City, Utah</p>
-                    </div>
-                </article>                
-
-            </div>
-        </div>
+    <section class="trending-container">
+        <div class="w-9/12 m-auto pt-20 pb-20">
+            <h2>Popular Events</h2>
     
-    </aside>
-    <main class="container">
-        <section>
-            
-        </section>
-        
-        <section>   
-            <div class="banner-container">
-                <div class="event-image col-12-12 mb-10">
-                    <h3 class="event-image-text">Dirtyphonics starting <br> the tour in Prague</h3>
+            <div class="flex flex-row relative items-center">
+                <!-- image -->
+                <div class="event-card-bg rounded-md text-white w-1/2 absolute" style="background-image: url('./assets/images/image-3.jpg');">
+                    <a href="/">
+                        
+                    </a>
                 </div>
-            </div>
-        </section>
-
-        <section>
-
-            <div class="flex flex-row items-center pt-max pb-max">
-                <h2 class="text-xl pt-10 pb-10">Most Popular</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" height="34px" data-name="Layer 1" viewBox="0 0 24 24"><path fill="var(--eventify-purple)" d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"/></svg>
-            </div>
-
-            <div class="event-list">
-
-                <div class="event-card flex flex-column">
-                        <div class="event-card-image-container">
-                            <img class="event-card-image" src="assets/event1.jpeg"/>
-                        </div>
-                        <div class="event-card-details">
-                            <p>An evening with Hilary Mantel</p>
-                            <p>Thu, Apr 29, 2021 6:00 PM GMT</p>
+                <!-- card -->
+                <div class="flex flex-row h-5/6 bg-white shadow-sm rounded-md absolute">
+                        <div class="w-1/2"></div>
+                        <div class="w-1/2 p-4">
+                            <h3>China flight attendants advised to wear diapers for Covid protection</h3>
+                            <div>
+                                <p>
+                                Once you’ve started to read his blog, you’ll probably be hungry for more of his wisdom. He’s written over eighteen bestselling books on business and marketing. ...
+                                Hobnotropic
+                                by matas
+                                Kinda of an experiment in search for my own sound. I've produced this track from 2 loops I've made using Hobnox Audiotool ( http://www.hobnox.com/audiotool.1046.en.html ). Imported into Ableton LIve! and tweaked some FX afterwards.
+                                </p>
+                            </div>
                         </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="event-card flex flex-column">
-                    <div class="event-card-image-container">
-                        <img class="event-card-image" src="assets/event.jpeg"/>
+    <section class="ad-container p-6">
+            <img class="m-auto" src="./assets/images/ad.jpg"/>
+    </section>
+
+
+    <footer class="bg-black flex flex-row text-white p-20">
+            <section class="w-3/12">
+                <h3>Eventify</h3>
+                <p class="text-sm text-gray-400 mb-6">&copy;&nbsp;2021, Eventify. All Right Reserved</p>
+
+                <div class="flex flex-row">
+                    <p>Follow Us -&nbsp;</p>
+                    <div class="flex flex-row text-white">
+                        <a href="/">Fb.</a>
+                        <span>/</span>
+                        <a href="/">Tw.</a>
+                        <span>/</span>
+                        <a href="/">Inst.</a>
                     </div>
-                    <div class="event-card-details">
-                        <p>An evening with Hilary Mantel</p>
-                        <p>Thu, Apr 29, 2021 6:00 PM GMT</p>
+                </div>
+            </section>
+            <section class="w-9/12">
+                <h2 class="text-2xl mb-4 ">We collaborate with ambitious brands and people; to create memorable experiences.</h2>
+
+                <div>
+                    <div></div>
+                    <div class="newsletter-form">
+                        <p class="mb-2">Weekly Newsletter</p>
+                        <div class="newsletter-form  flex flex-row">
+                            <form>
+                                <input type="text" placeholder="Email" required class="font-bold p-4 transition-all bg-transparent focus:outline-none text-white">
+                                <button type="submit" class="p-4 transition-all duration-500 outline-none hover:bg-white hover:text-black">SUBSCRIBE</button>
+                            </form>
+                        </div>
                     </div>
-            </div>
-
-            <div class="event-card flex flex-column">
-                <div class="event-card-image-container">
-                    <img class="event-card-image" src="assets/event1.jpeg"/>
                 </div>
-                <div class="event-card-details">
-                    <p>An evening with Hilary Mantel</p>
-                    <p>Thu, Apr 29, 2021 6:00 PM GMT</p>
-                </div>
-        </div>
-
-        <div class="event-card flex flex-column">
-            <div class="event-card-image-container">
-                <img class="event-card-image" src="assets/event1.jpeg"/>
-            </div>
-            <div class="event-card-details">
-                <p>An evening with Hilary Mantel</p>
-                <p>Thu, Apr 29, 2021 6:00 PM GMT</p>
-            </div>
-    </div>
-
-    <div class="event-card flex flex-column">
-        <div class="event-card-image-container">
-            <img class="event-card-image" src="assets/event1.jpeg"/>
-        </div>
-        <div class="event-card-details">
-            <p>An evening with Hilary Mantel</p>
-            <p>Thu, Apr 29, 2021 6:00 PM GMT</p>
-        </div>
-</div>
-
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <section>
-
-        </section>
-        <div>
-            <p>&copy; 2021 Eventify</p>
-        </div>
+            </section>
     </footer>
     
+    <script type="text/javascript">
+            window.addEventListener('scroll', (e) => {
+                    
+            })
+    </script>
 </body>
 </html>
