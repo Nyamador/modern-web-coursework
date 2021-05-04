@@ -1,0 +1,112 @@
+
+:root{
+    --header-color: #CFDAE3;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Sora', sans-serif;
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+.header {
+    background-color : var(--header-color);
+}
+
+.navbar-container{
+    height: 54px;
+}
+
+.carousel-container{
+    height: 550px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+}
+
+.event-card-bg{
+    box-shadow: 0 6px 12px -3px rgb(49 41 41 / 10%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 550px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: none;
+    display: flex;
+    align-items: flex-end;
+    z-index: 10;
+    position: relative;
+    color: #fff;
+    background-blend-mode: multiply;
+    transition: .3s;
+}
+
+.event-card-bg .event-name{
+    line-height: 1.4;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    height: 120px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.event-card-bg:hover{
+    background-color: rgba(0,0,0,.6);
+    cursor: pointer;
+}
+
+.event-card-bg::after{
+    content: "";
+    background: linear-gradient(
+180deg
+,rgba(0,0,0,0.0001) 0%,#000 100%);
+    mix-blend-mode: normal;
+    opacity: .9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    z-index: -1;
+}
+
+.newsletter-form form{
+    /* font-family: 'S'; */
+    border: 1px solid white;
+}
+.newsletter-form input{
+   
+    /* border-right: none; */
+}
+
+.newsletter-form button{
+    border-left: 1px solid white;
+}
+
+.login-heading{
+    background: linear-gradient( rgba(97, 97, 97, 0.1), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.6;
+    font-size: 270px;
+    line-height: 290px;
+    font-weight: 600;
+}
+
+.trending-container{
+    background-color: #e9ebed;
+}
