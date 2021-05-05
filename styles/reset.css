@@ -110,3 +110,11 @@ button:active{
 .trending-container{
     background-color: #e9ebed;
 }
+
+.trending-event-description-inverse{
+    background: linear-gradient(90deg,#fff 0%,rgba(255,255,255,0) 100%)!important;
+}
+
+.trending-text-card{
+    background: linear-gradient(270deg,#fff 0%,rgba(255,255,255,0) 100%);
+}
