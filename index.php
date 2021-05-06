@@ -37,12 +37,6 @@
 
         <div class="pt-20 pb-10">
             <div class="w-8/12 m-auto text-center mb-6">
-            <p>
-
-            <?php
-                echo __DIR__ ;
-            ?>
-            </p>
                 <h1 class="text-7xl font-semibold">All Your Favourite</h1>
             </div>
             

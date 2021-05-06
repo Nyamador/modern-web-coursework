@@ -20,7 +20,7 @@
         </div>
 
                 <div class="m-auto w-6/12">
-                        <form method="POST" action="./auth/main.php">
+                        <form method="POST" action="./auth/signup.php">
                             <div class="flex flex-col mb-6">
                                 <label class="mb-2">Email</label>
                                 <input name="email" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="email" placeholder="Email">
@@ -28,7 +28,7 @@
 
                             <div class="flex flex-col mb-6">
                                 <label class="mb-2">Fullname</label>
-                                <input name="email" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="email" placeholder="Mathew Smith">
+                                <input name="fullname" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="fullname" placeholder="Mathew Smith">
                             </div>                            
 
                             <div class="flex flex-col mb-6">

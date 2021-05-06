@@ -1,5 +1,5 @@
 <?php
-        require_once __DIR__ . "/db/db_config.php";
+        require_once $_SERVER['DOCUMENT_ROOT']."/eventify/db/db_config.php";
     
         abstract class BaseModel{
 
@@ -18,7 +18,7 @@
              */            
             abstract public function get($id); 
 
-            abstract public function filter();
+            abstract public function filter($email);
         
             abstract public function save($data);
 
