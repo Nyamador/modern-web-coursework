@@ -13,26 +13,33 @@
 </head>
 <body>
     <main class="w-8/12 m-auto">
-        <h1 class="login-heading">Log In</h1>
+        <h1 class="signup-heading">Sign Up</h1>
         <div class="mb-10 text-center">
-                    <h1 class="font-bold text-5xl">Log In</h1>
+                    <h1 class="font-bold text-5xl">Sign Up</h1>
                     <p class="text-xl text-gray-600 text-center">Book your seat for upcoming events.</p>
         </div>
 
                 <div class="m-auto w-6/12">
-                        <div class="flex flex-col mb-6">
-                            <label class="mb-2">Username</label>
-                            <input class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="text" placeholder="Username">
-                        </div>
+                        <form method="POST" action="./auth/main.php">
+                            <div class="flex flex-col mb-6">
+                                <label class="mb-2">Email</label>
+                                <input name="email" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="email" placeholder="Email">
+                            </div>
 
-                        <div class="flex flex-col mb-6">
-                            <label class="mb-2">Password</label>
-                            <input class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="password" placeholder="Username">
-                        </div>
+                            <div class="flex flex-col mb-6">
+                                <label class="mb-2">Fullname</label>
+                                <input name="email" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="email" placeholder="Mathew Smith">
+                            </div>                            
 
-                        <button class="p-4 bg-black text-white rounded-md w-1/2 mb-4">
-                            Login
-                        </button>
+                            <div class="flex flex-col mb-6">
+                                <label class="mb-2">Password</label>
+                                <input name="password" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="password" placeholder="Password">
+                            </div>
+
+                            <button type="submit" name="create-account" class="p-4 bg-black text-white rounded-md w-1/2 mb-4">
+                                Sign Up
+                            </button>                        
+                        </form>
 
                         <div class="flex flex-col">
                                 <a href="/" class="text-gray-400 hover:text-gray-500 mb-2">

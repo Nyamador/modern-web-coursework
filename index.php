@@ -1,3 +1,6 @@
+<?php
+    ini_set('display_startup_errors', 1);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,19 +16,19 @@
 <body>
 
     <header class="header pb-10">
-        <nav class="navbar-container flex flex-row p-4">
-                <div>
+        <nav class="navbar-container flex flex-row p-4 transition-all duration-1000 items-center">
+                <div class="transition-all duration-1000">
                     Eventify
                 </div>
                 
-                <div class="ml-auto">
+                <div class="ml-auto transition-all duration-1000">
                     <ul class="flex flex-row">
                         <li class="mr-2">
-                            <a href="/" class="hover:text-gray-700">Login</a>
+                            <a href="./login.php" class="hover:text-gray-700">Login</a>
                         </li>
 
                         <li class="mr-2">
-                            <a href="/" class="hover:text-gray-700">Signup</a>
+                            <a href="./signup.php" class="hover:text-gray-700">Signup</a>
                         </li>                        
                     </ul>
                 </div>
@@ -34,6 +37,12 @@
 
         <div class="pt-20 pb-10">
             <div class="w-8/12 m-auto text-center mb-6">
+            <p>
+
+            <?php
+                echo __DIR__ ;
+            ?>
+            </p>
                 <h1 class="text-7xl font-semibold">All Your Favourite</h1>
             </div>
             
@@ -183,13 +192,15 @@
                 </div>
             </div>            
         </div>
+
+
     </section>
 
     <section class="ad-container p-6">
             <img class="m-auto" src="./assets/images/ad.jpg"/>
     </section>
 
-
+    
     <footer class="bg-black flex flex-row text-white p-20">
             <section class="w-3/12">
                 <h3>Eventify</h3>
@@ -225,8 +236,9 @@
     </footer>
     
     <script type="text/javascript">
+            const navBar = document.querySelector('.navbar-container');
             window.addEventListener('scroll', (e) => {
-                    
+                    window.scrollY > '100' ? navBar.classList.add('bg-white', 'fixed', 'w-full', 'z-20', 'shadow-sm') : navBar.classList.replace('bg-white', 'bg-transparent');
             })
     </script>
 </body>

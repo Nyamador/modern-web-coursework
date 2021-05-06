@@ -22,7 +22,7 @@ button:active{
 }
 
 .navbar-container{
-    height: 54px;
+    height: 80px;
 }
 
 .carousel-container{
@@ -103,6 +103,16 @@ button:active{
     -webkit-text-fill-color: transparent;
     opacity: 0.6;
     font-size: 270px;
+    line-height: 290px;
+    font-weight: 600;
+}
+
+.signup-heading{
+    background: linear-gradient( rgba(97, 97, 97, 0.1), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.6;
+    font-size: 200px;
     line-height: 290px;
     font-weight: 600;
 }
