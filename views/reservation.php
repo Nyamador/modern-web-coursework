@@ -13,14 +13,15 @@
         $userModel = new UserModel(PDOSocket::instance());
         $userData = $userModel->get($_SESSION['email']);
         $reservationModel = new ReservationModel(PDOSocket::instance());
+        $event_id = $_GET['event'];
         $reservationModel->save(array(
-            'event_id'=>$_GET['event'],
+            'event_id'=>$event_id,
             'firstname'=>$_POST['firstname'],
             'lastname'=>$_POST['lastname'],
             'email'=>$_POST['email'],
             'user_id'=> $userData->id
         ));
-        header("Location: ../event.php?event=$event_id");        
+        header("Location: ../status.php?event=$event_id");        
     }
         
 ?>

@@ -143,18 +143,18 @@
                         <form method="post" action=<?php echo"./views/reservation.php?event=".$_GET['event']; ?>>
                                 <div class="flex flex-col mb-6">
                                         <label class="mb-2">Firstname</label>
-                                        <input name="firstname" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="text" placeholder="Mathew">
+                                        <input required name="firstname" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="text" placeholder="Mathew">
                                 </div>   
 
                                 <div class="flex flex-col mb-6">
                                         <label class="mb-2">Lastname</label>
-                                        <input name="lastname" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="text" placeholder="Adams">
+                                        <input required name="lastname" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="text" placeholder="Adams">
                                 </div>    
                                 
 
                                 <div class="flex flex-col mb-6">
                                         <label class="mb-2">Email</label>
-                                        <input name="email" value="<?php echo $_SESSION['email'];?>" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="text" placeholder="Adams">
+                                        <input required name="email" value="<?php echo $_SESSION['email'];?>" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="text" placeholder="Adams">
                                 </div>                                    
 
                                 <button type="submit" name="create-account" class="font-bold p-4 bg-black text-white rounded-md w-4/12 ml-auto mb-4">
