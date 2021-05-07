@@ -8,18 +8,22 @@
             parent::__construct($pdoSocket, "users");
         }
 
-        public function get($id){
+        public function get($email){
             $sql = "SELECT * FROM {$this->table} WHERE email=?";
             $preparedQuery = $this->connection->prepare($sql);
-            $preparedQuery->execute(array($id));
-            $preparedQuery->setFetchMode(PDO::FETCH_OBJ, "User");
+            $preparedQuery->execute(array($email));
+            $preparedQuery->setFetchMode(PDO::FETCH_OBJ);
             $result = $preparedQuery->fetch();
             return $result;
         }
 
         public function userExists($email){
             $data = $this->get($email);
-            !$data ? true : false;
+            if (isset($data->email)) {
+                return true;
+            }else{
+                return false;
+            }
         }
 
         
