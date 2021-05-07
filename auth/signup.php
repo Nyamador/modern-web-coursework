@@ -7,9 +7,11 @@
     require_once $_SERVER['DOCUMENT_ROOT'].'/eventify/models/user.php';
     require_once $_SERVER['DOCUMENT_ROOT'] .'/eventify/db/db_config.php';
 
+
+
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $userModel = new UserModel(PDOSocket::instance());
-        $userModel->save(array( 'email' => $_POST['email'],'fullname' => $_POST['fullname'], 'password' => $_POST['password']));
+        $userModel->save(array( 'email' => $_POST['email'],'fullname' => $_POST['fullname'], 'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)));
         header("Location: ../login.php");
     }
 ?>
