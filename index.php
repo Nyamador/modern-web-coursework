@@ -2,6 +2,12 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
+
+    require_once './models/event.php';
+
+    $eventModel = new EventModel(PDOSocket::instance());
+    $events = $eventModel->getAllWithRowLimit(6);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +40,7 @@
                                     echo '<li class="mr-2"><a href="./signup.php" class="hover:text-gray-700">Signup</a></li>';
                                 }else{
                                     echo '<li class="mr-6 hover:text-white"><a href="./create.php" class="hover:text-gray-700">Create Event</a></li>';
-                                    echo '<li class="mr-6 hover:text-white"><a href="./auth/logout.php" class="hover:text-gray-700">Dashboard</a></li>';
+                                    echo '<li class="mr-6 hover:text-white"><a href="./dashboard.php" class="hover:text-gray-700">Dashboard</a></li>';
                                     echo '<li class="mr-6 hover:text-white"><a href="./auth/logout.php" class="hover:text-gray-700">Logout</a></li>';
                                 }
                             }
@@ -132,20 +138,28 @@
             <h2 class="text-2xl mb-4">Popular Events</h2>
 
             <div class="grid grid-cols-4 mb-10">
-                    <div class="pl-2 pr-2 mb-20">
-                        <a href="" class="rounded-sm bg-white">
-                            <div class="rounded-sm">
+                <?php
+                    foreach($events as $event){
+                    $eventUrl = $event['public_id'];
+                    echo "<div class='pl-2 pr-2 mb-20'>
+                        <a href=\"./event.php?event=${eventUrl}\" class='rounded-sm bg-white'>
+                            <div class='rounded-sm'>
 
                                 <div>
-                                    <img class="rounded-md" src="./assets/images/author.jpg"/>
+                                    <img class='rounded-md' src='{$event["image_url"]}'/>
                                 </div>
 
-                                <div class="card-details">
-                                    <p>An event dubbed crazy with monie is ono</p>
+                                <div class='card-details'>
+                                    <p class='font-bold card-details-name'>{$event["name"]}</p>
+                                    <div class='mt-4'>
+                                        {$event["date"]}
+                                    </div>
                                 </div>
                             </div>                            
                         </a>
-                    </div>
+                    </div>";
+                    }
+                ?>
 
                     <div class="pl-2 pr-2 mb-20">
                         <a href="" class="rounded-sm bg-white">
@@ -195,24 +209,15 @@
             
             
     
-            <div class="trending-event-container flex flex-row relative items-center mb-20">
-                <!-- image -->
+            <!-- <div class="trending-event-container flex flex-row relative items-center mb-20">
                 <div class="event-card-bg rounded-md text-white w-1/2 absolute" style="background-image: url('./assets/images/image-3.jpg');">
                     <a href="/" class="flex flex-col">
                         <div class="p-10">
                             <span class="uppercase">Nov 11</span>
                             <p>Accra International Conference Center</p>
                         </div>
-                        <!-- <div class>
-                            
-                        </div> -->
                     </a>
                 </div>
-
-
-
-                
-                <!-- card -->
                 <div class="flex flex-row h-5/6 bg-white shadow-sm rounded-md absolute trending-text-card">
                         <div class="w-1/2"></div>
                         <div class="w-1/2 p-10">
@@ -228,7 +233,7 @@
                             </div>
                         </div>
                 </div>
-            </div>
+            </div> -->
 
         
         </div>

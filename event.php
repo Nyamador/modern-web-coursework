@@ -11,7 +11,6 @@
             header("Location: ./index.php");
         }
         session_start();
-        var_dump($eventData);
     }else{
         header("Location: ./index.php");
     }
@@ -141,7 +140,7 @@
                             <div id="close" class="text-red-500 cursor-pointer ml-auto">close</div>
                     </div>
                     <div class="p-4">
-                        <form>
+                        <form method="post" action=<?php echo"./views/reservation.php?event=".$_GET['event']; ?>>
                                 <div class="flex flex-col mb-6">
                                         <label class="mb-2">Firstname</label>
                                         <input name="firstname" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="text" placeholder="Mathew">

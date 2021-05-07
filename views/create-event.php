@@ -7,7 +7,6 @@
     require_once $_SERVER['DOCUMENT_ROOT'].'/eventify/models/event.php';
 
     session_start();
-    $_SESSION['uid'] = "1";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $eventModel = new EventModel(PDOSocket::instance());

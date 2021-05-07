@@ -34,11 +34,11 @@
                 <div class="m-auto w-6/12">
                         <form method="POST" action="./auth/login.php">
                             <div>
-                                <p class="text-red-500 font-bold p-2 bg-red-100 rounded-md mb-4">
+                                
                                     <?php
                                     if(isset($_GET['error'])){
-                                        echo $_GET['detail'];
-                                    }?></p>
+                                        echo '<p class="text-red-500 font-bold p-2 bg-red-100 rounded-md mb-4">'.$_GET['detail'].'</p>';
+                                    }?>
                             </div>
                             <div class="flex flex-col mb-6">
                                 <label class="mb-2">Email</label>

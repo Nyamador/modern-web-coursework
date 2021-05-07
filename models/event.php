@@ -35,7 +35,18 @@
             ));
         }
 
-        public function filter($id){}
+        public function getAllWithRowLimit($rows){
+            $sql = "SELECT * FROM {$this->table} LIMIT ?";
+            $preparedQuery = $this->connection->prepare($sql);
+            $preparedQuery->execute(array($rows));
+            $preparedQuery->setFetchMode(PDO::FETCH_ASSOC);
+            $result = $preparedQuery->fetchAll();
+            return $result;                
+        }
+
+        public function filter($id){
+
+        }
 
         public function create($data){
             $this->save($data);

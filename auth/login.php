@@ -10,7 +10,6 @@
         $userModel = new UserModel(PDOSocket::instance());
         if($userModel->userExists($_POST["email"])){
             // start a session and append users details to session
-            echo "exists!";
             $userData = $userModel->get($_POST["email"]);
             if(password_verify($_POST['password'], $userData->password)){
                 session_start();
