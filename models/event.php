@@ -20,6 +20,15 @@
             return $result;
         }
 
+        public function getForUser($user_id){
+            $sql = "SELECT * FROM {$this->table} WHERE created_by=?";
+            $preparedQuery = $this->connection->prepare($sql);
+            $preparedQuery->execute(array($user_id));
+            $preparedQuery->setFetchMode(PDO::FETCH_OBJ);
+            $result = $preparedQuery->fetchAll();
+            return $result;
+        }
+
         public function save($data){
             $sql = "INSERT INTO {$this->table} (public_id, name, date, time, location, description, organizer_name, image_url, created_by)"." VALUES(?,?,?,?,?,?,?,?,?)";
             $preparedQuery = $this->connection->prepare($sql);
@@ -52,6 +61,7 @@
             ));
         }
 
+        // public function getDashboardList()
         public function getAllWithRowLimit($rows){
             $sql = "SELECT * FROM {$this->table} LIMIT ?";
             $preparedQuery = $this->connection->prepare($sql);

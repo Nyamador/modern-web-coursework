@@ -6,7 +6,8 @@
     require_once './models/event.php';
 
     $eventModel = new EventModel(PDOSocket::instance());
-    $events = $eventModel->getAllWithRowLimit(6);
+    $events = $eventModel->getAllWithRowLimit(20);
+    $eventTrending = $eventModel->getAllWithRowLimit(4);
 
 ?>
 <!DOCTYPE html>
@@ -24,7 +25,7 @@
 </head>
 <body>
 
-    <header class="header pb-10">
+    <header class="header banner pb-10">
         <nav class="navbar-container flex flex-row p-4 transition-all duration-1000 items-center">
                 <div class="transition-all duration-1000">
                     <img src="./assets/logo_dim.svg" id="logo"/>
@@ -61,74 +62,8 @@
         </div>
 
 
-        <section class="carousel-container">
-                <div class="flex flex-row">
-                    <div class="pl-2 pr-2 w-1/4 h-full event-card-container flex flex-col">
-                        <a href="/">
-                            <div class="event-card-bg rounded-md text-white" style="background-image: url('./assets/images/african.jpg');">
-                                        <div class="h-1/2 mt-auto w-full p-4 flex flex-col">
-                                            <div class="border-b border-white pb-4 mb-4">
-                                                <p class="text-3xl event-name">Imprisoned nearly 40 years for slave trade</p>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm">By Ronald Richards</p>
-                                                <p class="text-sm">20th January, 2021</p>
-                                            </div>
-                                        </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="pl-2 pr-2 w-1/4 h-full event-card-container flex flex-col">
-                        <a href="/">
-                            <div class="event-card-bg rounded-md text-white" style="background-image: url('./assets/images/image-2.jpg');">
-                                        <div class="h-1/2 mt-auto w-full p-4 flex flex-col">
-                                            <div class="border-b border-white pb-4 mb-4">
-                                                <p class="text-3xl event-name">Fox News personalities attack Bill Gates for pandemic comments</p>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm">By Ronald Richards</p>
-                                                <p class="text-sm">20th January, 2021</p>
-                                            </div>
-                                        </div>
-                            </div>
-                        </a>
-                    </div>    
-                    
-                    <div class="pl-2 pr-2 w-1/4 h-full event-card-container flex flex-col">
-                        <a href="/">
-                            <div class="event-card-bg rounded-md text-white" style="background-image: url('./assets/images/image-3.jpg');">
-                                        <div class="h-1/2 mt-auto w-full p-4 flex flex-col">
-                                            <div class="border-b border-white pb-4 mb-4">
-                                                <p class="text-3xl event-name">'Fantastic' Barca wins on landmark night for Lionel Messi in la liga football</p>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm">By Ronald Richards</p>
-                                                <p class="text-sm">20th January, 2021</p>
-                                            </div>
-                                        </div>
-                            </div>
-                        </a>
-                    </div>     
-                    
-                    <div class="pl-2 pr-2 w-1/4 h-full event-card-container flex flex-col">
-                        <a href="/">
-                            <div class="event-card-bg rounded-md text-white" style="background-image: url('./assets/images/image-4.jpg');">
-                                        <div class="h-1/2 mt-auto w-full p-4 flex flex-col">
-                                            <div class="border-b border-white pb-4 mb-4">
-                                                <p class="text-3xl event-name">Actor Ian McKellen receives Covid-19 vaccine, says he feels 'euphoric'</p>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm">By Ronald Richards</p>
-                                                <p class="text-sm">20th January, 2021</p>
-                                            </div>
-                                        </div>
-                            </div>
-                        </a>
-                    </div>                         
-                    
-                </div>
-        </section>
+        <!-- <section class="carousel-container">
+        </section> -->
 
 
     </header>

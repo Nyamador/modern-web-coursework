@@ -21,7 +21,6 @@
             'image_url'=>$_POST['image_url'],
             'created_by'=>$_SESSION['uid']
         ));
-        $event_id = md5($_POST['name']);
         header("Location: ../event.php?event=$event_id");
     }
 ?>

@@ -30,30 +30,9 @@
 </head>
 <body>
 
-        <nav class="bg-white navbar-container flex flex-row p-4 transition-all duration-1000 items-center mb-20">
-                <div class="transition-all duration-1000">
-                    <a href="./index.php">
-                        <img src="./assets/logo_dark.svg" id="logo"/>
-                    </a>
-                </div>
-
-
-
-                <div class="ml-auto transition-all duration-1000">
-                    <ul class="flex flex-row">
-                        <li class="mr-2">
-                            <a href="./login.php" class="hover:text-gray-700">Login</a>
-                        </li>
-
-                        <li class="mr-2">
-                            <a href="./signup.php" class="hover:text-gray-700">Signup</a>
-                        </li>                        
-                    </ul>
-                </div>
-
-        </nav>     
+        <?php require_once './includes/navbar.php' ?>    
         
-        <main clas="">
+        <main clas="mt-20">
                 <div class="p-6 rounded-md container m-auto bg-white shadow-sm w-7/12">
                         <h1 class="font-bold text-3xl">Edit Your Event</h1>
                         <p class="text-sm text-gray-500">Let's cover some basic information about your first event on Eventify..</p>

@@ -1,20 +1,5 @@
 <?php
-    // $host = 'localhost';
-    // $user = 'root';
-    // $dbname = 'eventify';
-    // $password = '';
 
-    // $dsn = 'mysql:host='.$host.';$dbname='.$dbname;
-
-    // try{
-    //     $connection  = new PDO($dsn, $user, $password);
-    //     foreach($connection->query('SELECT * from users') as $row) {
-    //         print_r($row);
-    //     }
-    // }catch(PDOException $e){
-    //     print "Error!: " . $e->getMessage(). "<br/>";
-    //     die();
-    // }
 
     class PDOSocket{
         private static $pdo;

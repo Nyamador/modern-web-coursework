@@ -37,6 +37,19 @@ button:active{
     height: 300px;
 }
 
+.banner{
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    background-image: url(../assets/images/classic-header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: inherit;
+    background-position: 50% 50%;
+    box-shadow: 0 0 0 0 #ffffff;
+}
 .header {
     /* background-color : var(--header-color); */
     background-color: #d1421a;
