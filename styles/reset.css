@@ -16,9 +16,31 @@ h1,h2,h3,h4,h5,h6{
 button:active{
     transform: scale(0.98);
 }
+.typo-heading{
+    font-family: 'Sora', sans-serif !important;
+}
+
+.typo-paragraph{
+    font-family: 'Lora', sans-serif !important;
+}
+
+.modal-toggled{
+    overflow: hidden;
+    position: relative;
+}
+
+.modal-default{
+    overflow: initial;
+}
+
+#modal-container{
+    height: 300px;
+}
 
 .header {
-    background-color : var(--header-color);
+    /* background-color : var(--header-color); */
+    background-color: #d1421a;
+    color: #ffa890;
 }
 
 .navbar-container{
@@ -127,4 +149,37 @@ button:active{
 
 .trending-text-card{
     background: linear-gradient(270deg,#fff 0%,rgba(255,255,255,0) 100%);
+}
+
+.event-detail-name{
+    font-weight: 700;
+    font-family: 'Sora', sans-serif;
+    font-size: 56px;
+    line-height: 70px;
+    color: rgb(23, 22, 26);
+}
+
+.event-detail-date::before{
+    display: inline-block;
+    content: "";
+    background-color: #9ca3af;
+    width: 8px;
+    height: 8px;
+    margin: 0px 15px;
+    border-radius: 100%;
+}
+
+.event-detail-main{
+    background: #f2f5f8;
+}
+
+.event-detail-description{
+    font-size: 20px;
+    font-family: 'Lora', sans-serif;
+}
+
+.card-details{
+    background: linear-gradient(270deg,#fff 0%,rgba(255,255,255,0) 100%);
+    border-radius: 0 0 10px 0;
+    padding: 40px 30px 70px 20px;
 }

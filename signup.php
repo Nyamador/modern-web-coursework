@@ -21,6 +21,10 @@
 
                 <div class="m-auto w-6/12">
                         <form method="POST" action="./auth/signup.php">
+                                    <?php
+                                    if(isset($_GET['error'])){
+                                        echo '<p class="text-red-500 font-bold p-2 bg-red-100 rounded-md mb-4">'.$_GET['detail'].'</p>';
+                                    }?>     
                             <div class="flex flex-col mb-6">
                                 <label class="mb-2">Email</label>
                                 <input name="email" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="email" placeholder="Email">
@@ -45,8 +49,8 @@
                                 <a href="/" class="text-gray-400 hover:text-gray-500 mb-2">
                                     Forgot password?
                                 </a>
-                                <a href="/" class="text-gray-400 hover:text-gray-500 mb-2">
-                                    Don't have an account?
+                                <a href="./login.php" class="text-gray-400 hover:text-gray-500 mb-2">
+                                    Already have an account?
                                 </a>                                
                         </div>
                 </div>

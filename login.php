@@ -1,3 +1,15 @@
+<?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+
+        session_start();
+        if(isset($_SESSION['logged_in'])){
+            if($_SESSION['logged_in'] == true){
+                header("Location: ./index.html");
+            }
+        }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +32,17 @@
         </div>
 
                 <div class="m-auto w-6/12">
-                        <form method="POST" action="./auth/main.php">
+                        <form method="POST" action="./auth/login.php">
+                            <div>
+                                <p class="text-red-500 font-bold p-2 bg-red-100 rounded-md mb-4">
+                                    <?php
+                                    if(isset($_GET['error'])){
+                                        echo $_GET['detail'];
+                                    }?></p>
+                            </div>
                             <div class="flex flex-col mb-6">
                                 <label class="mb-2">Email</label>
-                                <input name="email" value=" <?php  isset($_GET['email']) ?  $_GET['email'] : ""  ?>" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="email" placeholder="Email">
+                                <input name="email" value=" <?php  if(isset($_GET['email'])){echo $_GET['email'];} ?>" class="outline-none bg-gray-100 p-2 rounded-md focus:ring-2 focus:ring-gray-200" type="email" placeholder="Email">
                             </div>
 
                             <div class="flex flex-col mb-6">

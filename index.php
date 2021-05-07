@@ -1,5 +1,7 @@
 <?php
+    ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <link href="//fonts.googleapis.com/css?family=Lora:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap&amp;subset=cyrillic" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Sora:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap&amp;subset=latin" rel="stylesheet" type="text/css">    
     <title>Eventify | Home</title>
@@ -18,18 +21,24 @@
     <header class="header pb-10">
         <nav class="navbar-container flex flex-row p-4 transition-all duration-1000 items-center">
                 <div class="transition-all duration-1000">
-                    Eventify
+                    <img src="./assets/logo_dim.svg" id="logo"/>
                 </div>
                 
                 <div class="ml-auto transition-all duration-1000">
                     <ul class="flex flex-row">
-                        <li class="mr-2">
-                            <a href="./login.php" class="hover:text-gray-700">Login</a>
-                        </li>
-
-                        <li class="mr-2">
-                            <a href="./signup.php" class="hover:text-gray-700">Signup</a>
-                        </li>                        
+                        <?php
+                            session_start();
+                            if(isset($_SESSION['logged_in'])){
+                                if($_SESSION['logged_in'] != true){
+                                    echo '<li class="mr-2"><a href="./login.php" class="hover:text-gray-700">Login</a></li>';
+                                    echo '<li class="mr-2"><a href="./signup.php" class="hover:text-gray-700">Signup</a></li>';
+                                }else{
+                                    echo '<li class="mr-6 hover:text-white"><a href="./create.php" class="hover:text-gray-700">Create Event</a></li>';
+                                    echo '<li class="mr-6 hover:text-white"><a href="./auth/logout.php" class="hover:text-gray-700">Dashboard</a></li>';
+                                    echo '<li class="mr-6 hover:text-white"><a href="./auth/logout.php" class="hover:text-gray-700">Logout</a></li>';
+                                }
+                            }
+                        ?>           
                     </ul>
                 </div>
 
@@ -121,6 +130,70 @@
     <section class="trending-container">
         <div class="w-9/12 m-auto pt-20 pb-20">
             <h2 class="text-2xl mb-4">Popular Events</h2>
+
+            <div class="grid grid-cols-4 mb-10">
+                    <div class="pl-2 pr-2 mb-20">
+                        <a href="" class="rounded-sm bg-white">
+                            <div class="rounded-sm">
+
+                                <div>
+                                    <img class="rounded-md" src="./assets/images/author.jpg"/>
+                                </div>
+
+                                <div class="card-details">
+                                    <p>An event dubbed crazy with monie is ono</p>
+                                </div>
+                            </div>                            
+                        </a>
+                    </div>
+
+                    <div class="pl-2 pr-2 mb-20">
+                        <a href="" class="rounded-sm bg-white">
+                            <div class="rounded-sm">
+
+                                <div>
+                                    <img class="rounded-md" src="./assets/images/author.jpg"/>
+                                </div>
+
+                                <div class="card-details">
+                                    <p>An event dubbed crazy with monie is ono</p>
+                                </div>
+                            </div>                            
+                        </a>
+                    </div>
+                    
+                    <div class="pl-2 pr-2 mb-20">
+                        <a href="" class="rounded-sm bg-white">
+                            <div class="rounded-sm">
+
+                                <div>
+                                    <img class="rounded-md" src="./assets/images/author.jpg"/>
+                                </div>
+
+                                <div class="card-details">
+                                    <p>An event dubbed crazy with monie is ono</p>
+                                </div>
+                            </div>                            
+                        </a>
+                    </div>
+                    
+                    <div class="pl-2 pr-2 mb-20">
+                        <a href="" class="rounded-sm bg-white">
+                            <div class="rounded-sm">
+
+                                <div>
+                                    <img class="rounded-md" src="./assets/images/author.jpg"/>
+                                </div>
+
+                                <div class="card-details">
+                                    <p>An event dubbed crazy with monie is ono</p>
+                                </div>
+                            </div>                            
+                        </a>
+                    </div>                    
+            </div>
+            
+            
     
             <div class="trending-event-container flex flex-row relative items-center mb-20">
                 <!-- image -->
@@ -135,6 +208,10 @@
                         </div> -->
                     </a>
                 </div>
+
+
+
+                
                 <!-- card -->
                 <div class="flex flex-row h-5/6 bg-white shadow-sm rounded-md absolute trending-text-card">
                         <div class="w-1/2"></div>
@@ -153,38 +230,7 @@
                 </div>
             </div>
 
-            <!-- 2 -->
-            <div class="trending-event-container-inverse flex flex-row relative items-center mb-20">
-                <!-- card -->
-                <div class="trending-event-description-inverse flex flex-row h-5/6 bg-white shadow-sm rounded-md absolute trending-text-card">
-                    <div class="w-1/2 p-10">
-                        <h3 class="text-3xl font-bold mb-6">China flight attendants advised to wear diapers for Covid protection</h3>
-                        <div>
-                            <p class="text-gray-600 mb-4">
-                            Once you’ve started to read his blog, you’ll probably be hungry for more of his wisdom. He’s written over eighteen bestselling books on business and marketing. ...
-                            </p>
-
-                            <button class="bg-black rounded-md p-2 text-white w-full">
-                                Buy Ticket
-                            </button>
-                        </div>
-                    </div>
-                    <div class="w-1/2"></div>
-                </div>
-
-                <!-- image -->
-                <div class="event-card-bg rounded-md text-white w-1/2 absolute ml-auto" style="background-image: url('./assets/images/image-4.jpg');">
-                    <a href="/" class="flex flex-col">
-                        <div class="p-10">
-                            <span class="uppercase">Nov 11</span>
-                            <p>Accra International Conference Center</p>
-                        </div>
-                        <!-- <div class>
-                            
-                        </div> -->
-                    </a>
-                </div>
-            </div>            
+        
         </div>
 
 
@@ -232,7 +278,8 @@
     <script type="text/javascript">
             const navBar = document.querySelector('.navbar-container');
             window.addEventListener('scroll', (e) => {
-                    window.scrollY > '100' ? navBar.classList.add('bg-white', 'fixed', 'w-full', 'z-20', 'shadow-sm') : navBar.classList.replace('bg-white', 'bg-transparent');
+                    window.scrollY > '100' ? navBar.classList.add('bg-white', 'fixed', 'w-full', 'z-20') : navBar.classList.replace('bg-white', 'bg-transparent');
+                    window.scrollY > '100' ? document.querySelector('#logo').src = './assets/logo_dark.svg' : './assets/logo_dim.svg';
             })
     </script>
 </body>
