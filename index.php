@@ -159,52 +159,7 @@
                         </a>
                     </div>";
                     }
-                ?>
-
-                    <div class="pl-2 pr-2 mb-20">
-                        <a href="" class="rounded-sm bg-white">
-                            <div class="rounded-sm">
-
-                                <div>
-                                    <img class="rounded-md" src="./assets/images/author.jpg"/>
-                                </div>
-
-                                <div class="card-details">
-                                    <p>An event dubbed crazy with monie is ono</p>
-                                </div>
-                            </div>                            
-                        </a>
-                    </div>
-                    
-                    <div class="pl-2 pr-2 mb-20">
-                        <a href="" class="rounded-sm bg-white">
-                            <div class="rounded-sm">
-
-                                <div>
-                                    <img class="rounded-md" src="./assets/images/author.jpg"/>
-                                </div>
-
-                                <div class="card-details">
-                                    <p>An event dubbed crazy with monie is ono</p>
-                                </div>
-                            </div>                            
-                        </a>
-                    </div>
-                    
-                    <div class="pl-2 pr-2 mb-20">
-                        <a href="" class="rounded-sm bg-white">
-                            <div class="rounded-sm">
-
-                                <div>
-                                    <img class="rounded-md" src="./assets/images/author.jpg"/>
-                                </div>
-
-                                <div class="card-details">
-                                    <p>An event dubbed crazy with monie is ono</p>
-                                </div>
-                            </div>                            
-                        </a>
-                    </div>                    
+                ?>                   
             </div>
             
             

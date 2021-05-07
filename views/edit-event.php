@@ -10,8 +10,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $eventModel = new EventModel(PDOSocket::instance());
-        $eventModel->save(array(
-            'public_id'=>md5($_POST['name']),
+        $eventModel->update(array(
             'name'=>$_POST['name'],
             'date'=>$_POST['date'],
             'time'=>$_POST['time'],
@@ -20,7 +19,7 @@
             'organizer_name'=>$_POST['organizer_name'],
             'image_url'=>$_POST['image_url'],
             'created_by'=>$_SESSION['uid']
-        ));
+        ), $_GET['event']);
         $event_id = md5($_POST['name']);
         header("Location: ../event.php?event=$event_id");
     }

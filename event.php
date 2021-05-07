@@ -29,38 +29,31 @@
 </head>
 <body class="relative" data-modalToggled="false">
 
-    <nav class="navbar-container flex flex-row p-4 transition-all duration-1000 items-center">
-                <div class="transition-all duration-1000">
-                    Eventify
-                </div>
-                
-                <div class="ml-auto transition-all duration-1000">
-                    <ul class="flex flex-row">
-                        <li class="mr-2">
-                            <a href="./login.php" class="hover:text-gray-700">Login</a>
-                        </li>
+<?php require_once './includes/navbar.php' ?>  
 
-                        <li class="mr-2">
-                            <a href="./signup.php" class="hover:text-gray-700">Signup</a>
-                        </li>                        
-                    </ul>
-                </div>
-
-        </nav>    
-
-    <header class="flex flex-row m-auto justify-center pb-20">
-        <div class="w-4/12">
+    <header class="flex flex-row m-auto justify-center pb-20 mt-20">
+        <div class="w-4/12 mr-10">
             <img src="<?php echo $eventData->image_url; ?>" class="rounded-md m-auto"/>
         </div>
         <div class="w-6/12">
             <div class="flex flex-row text-gray-400">
                 <span class="mr-2 mb-4"><?php echo $eventData->organizer_name; ?></span>
                 <span class="event-detail-date"><?php echo $eventData->date; ?></span>
+                <span class="ml-2">Venue: <?php echo $eventData->location; ?></span>
             </div>
             <h1 class="event-detail-name"><?php echo $eventData->name; ?></h1>
 
-            <p class="text-gray-500 leading-8 mb-4">
-            <?php echo $eventData->description; ?>
+                <?php
+                    if($_SESSION['uid'] == $eventData->created_by){
+                        echo "<a class='hover:text-black hover:underline text-sm text-gray-500' href='./edit-event.php?event={$eventData->public_id}'>Edit Your Event</a>";
+                    }
+                ?>
+
+            <p class="text-gray-500 leading-8 mb-4 short-description">
+            <?php  
+            $pos=strpos($eventData->description, ' ', 100);
+            echo substr($eventData->description,0,$pos ); 
+            ?>
             </p>
 
             <div class="flex flex-row items-center">

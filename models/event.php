@@ -21,7 +21,7 @@
         }
 
         public function save($data){
-            $sql = "INSERT INTO {$this->table} (public_id, name, date, time, location, description, image_url, created_by)"." VALUES(?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO {$this->table} (public_id, name, date, time, location, description, organizer_name, image_url, created_by)"." VALUES(?,?,?,?,?,?,?,?,?)";
             $preparedQuery = $this->connection->prepare($sql);
             $preparedQuery->execute(array(
                 $data['public_id'],
@@ -30,8 +30,25 @@
                 $data['time'],
                 $data['location'],
                 $data['description'],
+                $data['organizer_name'],
                 $data['image_url'],
                 $data['created_by']
+            ));
+        }
+
+        public function update($data, $public_id){
+            $sql = "UPDATE {$this->table} SET name=?, date=?, time=? , location=?, description=?, organizer_name=?, image_url=?, created_by=? WHERE public_id =?";
+            $preparedQuery = $this->connection->prepare($sql);
+            $preparedQuery->execute(array(
+                $data['name'],
+                $data['date'],
+                $data['time'],
+                $data['location'],
+                $data['description'],
+                $data['organizer_name'],
+                $data['image_url'],
+                $data['created_by'],           
+                $public_id,
             ));
         }
 
